@@ -68,21 +68,21 @@ public class DataManager {
             String taskType = getTaskType(line);
             String taskDescription = getTaskDescription(line);
             switch (taskType) {
-            case "T":
-                Todo todo = new Todo(taskDescription);
-                allTasks.add(todo);
-                break;
-            case "D":
-                Deadline deadline = new Deadline(taskDescription);
-                allTasks.add(deadline);
-                break;
-            case "E":
-                Event event = new Event(taskDescription);
-                allTasks.add(event);
-                break;
-            default:
-                System.out.println("Unknown task encountered. Skipping");
-                break;
+                case "T":
+                    Todo todo = new Todo(taskDescription);
+                    allTasks.add(todo);
+                    break;
+                case "D":
+                    Deadline deadline = new Deadline(taskDescription);
+                    allTasks.add(deadline);
+                    break;
+                case "E":
+                    Event event = new Event(taskDescription);
+                    allTasks.add(event);
+                    break;
+                default:
+                    System.out.println("Unknown task encountered. Skipping");
+                    break;
             }
         }
         return allTasks;
