@@ -1,0 +1,10 @@
+diff a/src/se/edu/inclass/Main.java b/src/se/edu/inclass/Main.java	(rejected hunks)
+@@ -16,6 +16,8 @@
+         DataManager dm = new DataManager("./data/data.txt");
+         ArrayList<Task> tasksData = dm.loadData();
+ 
++        printData(tasksData);
++        System.out.println();
+         System.out.println("Printing deadlines");
+         printDeadlines(tasksData);
+ 
